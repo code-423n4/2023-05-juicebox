@@ -46,7 +46,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 ---
 
-# Juicebox contest details
+# Juicebox Buyback Delegate contest details
 - Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
   - HM awards: XXX XXX USDC (Notion: HM (main) pool)
   - QA report awards: XXX XXX USDC (Notion: QA pool)
