@@ -47,15 +47,15 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 ---
 
 # Juicebox Buyback Delegate contest details
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: XXX XXX USDC (Notion: HM (main) pool)
-  - QA report awards: XXX XXX USDC (Notion: QA pool)
-  - Gas report awards: XXX XXX USDC (Notion: Gas pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Lookout awards: XXX XXX USDC (Notion: Sum of Pre-sort fee + Pre-sort early bonus)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
+- Total Prize Pool: $24,500 USDC 
+  - HM awards: 17,000 USDC
+  - QA report awards: $1,000 USDC 
+  - Gas report awards: $2,000 USDC 
+  - Judge awards: $2,400 USDC
+  - Lookout awards: $1,600 USDC 
+  - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-sponsorName-contest/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-05-juicebox-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts May 15, 2023 20:00 UTC
 - Ends May 18, 2023 20:00 UTC
