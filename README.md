@@ -95,25 +95,25 @@ Automated findings output for the contest can be found [here](add link to report
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
+- How many contracts are in scope?: 1
+- Total SLoC for these contracts?:  168
+- How many external imports are there?:  15
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  1
 - Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:  
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
-- Please describe required context:   
-- Does it use an oracle?:  
-- Does the token conform to the ERC20 standard?:  
-- Are there any novel or unique curve logic or mathematical models?: 
+- How many external calls?:   5
+- What is the overall line coverage percentage provided by your tests?:  100
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   true
+- Please describe required context: Juicebox pay & redeem delegates  
+- Does it use an oracle?: No 
+- Does the token conform to the ERC20 standard?:  true
+- Are there any novel or unique curve logic or mathematical models?: none
 - Does it use a timelock function?:  
 - Is it an NFT?: 
-- Does it have an AMM?:   
+- Does it have an AMM?:   true
 - Is it a fork of a popular project?:   
 - Does it use rollups?:   
 - Is it multi-chain?:  
-- Does it use a side-chain?: 
+- Does it use a side-chain?: false
 ```
 
 # Tests
