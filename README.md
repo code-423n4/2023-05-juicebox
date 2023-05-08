@@ -57,8 +57,8 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-05-juicebox-buyback-delegate/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts May 15, 2023 20:00 UTC
-- Ends May 18, 2023 20:00 UTC
+- Starts May 18, 2023 20:00 UTC
+- Ends May 22, 2023 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
