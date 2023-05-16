@@ -16,11 +16,11 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ## ⭐️ Sponsor: Add code to this repo
 
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
+- [x] Create a PR to this repo with the below changes:
+- [x] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
+- [x] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
+- [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
+- [x] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
 
 
 ---
@@ -70,7 +70,11 @@ Automated findings output for the contest can be found [here](add link to report
 
 # Overview
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
+`juice-buyback` provides a [data source](https://docs.juicebox.money/dev/learn/glossary/data-source/) and [delegate](https://docs.juicebox.money/dev/learn/glossary/delegate/) which maximise the [project token](https://docs.juicebox.money/dev/learn/glossary/tokens/) received by the contributor when they call `pay` on the [terminal](https://docs.juicebox.money/dev/learn/glossary/payment-terminal/). In order to do so, the delegate will either mint new tokens from the project ("vanilla" path, bypassing the delegate) or use the funds from `pay` to buy existing tokens in a Uniswap V3 pool ("buyback" path), depending on the best quote available at the time of the call.
+
+This first iteration is optimised for ETH as terminal token.
+
+To learn more about the Juicebox protocol, see our [docs](https://docs.juicebox.money/). To learn more about `juice-buyback`, see its [README](juice-buyback/README.md).
 
 # Scope
 
@@ -94,7 +98,7 @@ Automated findings output for the contest can be found [here](add link to report
 
 ## Scoping Details 
 ```
-- If you have a public code repo, please share it here:  
+- If you have a public code repo, please share it here: [`juice-buyback`](https://github.com/jbx-protocol/juice-buyback/)
 - How many contracts are in scope?: 1
 - Total SLoC for these contracts?:  168
 - How many external imports are there?:  15
@@ -107,17 +111,19 @@ Automated findings output for the contest can be found [here](add link to report
 - Does it use an oracle?: No 
 - Does the token conform to the ERC20 standard?:  true
 - Are there any novel or unique curve logic or mathematical models?: none
-- Does it use a timelock function?:  
-- Is it an NFT?: 
+- Does it use a timelock function?: false
+- Is it an NFT?: false
 - Does it have an AMM?:   true
-- Is it a fork of a popular project?:   
-- Does it use rollups?:   
-- Is it multi-chain?:  
+- Is it a fork of a popular project?: false
+- Does it use rollups?: false
+- Is it multi-chain?: false
 - Does it use a side-chain?: false
 ```
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
+Anyone can deploy `juice-buyback` using the provided forge script.
 
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+To run this repo, you'll need [Foundry](https://book.getfoundry.sh/) and [NodeJS](https://nodejs.dev/en/learn/how-to-install-nodejs/) installed.
+
+Install the dependencies with `npm install && git submodule update --init --force --recursive`, you should then be able to run the tests using `forge test` or deploy a new delegate using `forge script Deploy` (and the correct arguments, based on the chain and key you want to use - see the [Foundry docs](https://book.getfoundry.sh/)).
