@@ -1,0 +1,30 @@
+{
+  "name": "@jbx-protocol/juice-buyback",
+  "bugs": {
+    "url": "https://github.com/jbx-protocol/juice-buyback/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbx-protocol/juice-buyback"
+  },
+  "version": "0.0.1",
+  "license": "MIT",
+  "devDependencies": {
+    "@exhausted-pigeon/uniswap-v3-forge-quoter": "^1.0.1",
+    "prettier": "^2.4.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.6",
+    "solhint-plugin-prettier": "^0.0.5"
+  },
+  "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,json,sol}\"",
+    "deploy-mainnet": "source .env && forge script DeployMainnet --rpc-url $MAINNET_RPC_PROVIDER_URL --broadcast --mnemonic-paths mnemonic.txt --verify --etherscan-api-key $ETHERSCAN_API_KEY --sender $SENDER_ADDRESS"
+  },
+  "dependencies": {
+    "@jbx-protocol/juice-contracts-v3": "^3.1.2",
+    "@openzeppelin/contracts": "^4.7.3",
+    "@paulrberg/contracts": "^3.7.0",
+    "@uniswap/v3-core": "1.0.2-solc-0.8-simulate",
+    "prb-math": "^2.4.3"
+  }
+}
