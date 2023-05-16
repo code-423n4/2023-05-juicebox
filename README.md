@@ -12,19 +12,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [x] Create a PR to this repo with the below changes:
-- [x] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [x] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [x] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
-
----
-
 ## ⭐️ Sponsor: Edit this README
 
 Under "SPONSORS ADD INFO HERE" heading below, include the following:
@@ -35,13 +22,13 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - [x] Under the "Scope" heading, provide the name of each contract and:
   - [x] source lines of code (excluding blank lines and comments) in each
   - [ ] external contracts called in each
-  - [ ] libraries used in each
+  - [x] libraries used in each
 - [x] Describe any novel or unique curve logic or mathematical models implemented in the contracts
 - [x] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
 - [x] Describe anything else that adds any special logic that makes your approach unique
 - [x] Identify any areas of specific concern in reviewing the code
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
+- [x] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
+- [x] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
 - [ ] Delete this checklist and all text above the line below when you're ready.
 
 ---
@@ -112,6 +99,18 @@ Other contracts.
 - Is it multi-chain?: no
 - Does it use a side-chain?: no
 ```
+
+## About Juicebox
+
+The Juicebox protocol is a programmable treasury. Projects can use it to configure how its tokens should be minted when it receives funds, and under what conditions those funds can be distributed to preprogrammed addresses or reclaimed by its community. These rules can evolve over funding cycles, allowing people to bootstrap open-ended projects and add structure, constraints, extensions, and incentives over time as needed.
+
+When people pay a project, they interact with a [payment terminal](https://docs.juicebox.money/dev/learn/glossary/payment-terminal/), a contract which controls the inflows and outflows of a certain token for every project which uses it. Projects can override the default payment terminal behavior through the use of data sources and delegates.
+
+A [data source](https://docs.juicebox.money/dev/learn/glossary/data-source/) is used to provide custom data to a payment terminal's `pay` (or `redeem`) function. Data sources must adhere to [`IJBFundingCycleDataSource`](https://docs.juicebox.money/dev/api/interfaces/ijbfundingcycledatasource/).
+
+A [pay delegate](https://docs.juicebox.money/dev/learn/glossary/delegate/) includes a custom `didPay(...)` hook that will execute after all of the default protocol pay logic has successfully executed in the terminal contract. Pay delegates must adhere to [`IJBPayDelegate`](https://docs.juicebox.money/dev/api/interfaces/ijbpaydelegate/).
+
+`juice-buyback` is an `IJBPayDelegate` *and* an `IJBFundingCycleDataSource`.
 
 # Tests
 
