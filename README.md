@@ -29,17 +29,17 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
-- [ ] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [ ] When linking, please provide all links as full absolute links versus relative links
-  - [ ] All information should be provided in markdown format (HTML does not render on Code4rena.com)
-- [ ] Under the "Scope" heading, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
+- [x] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
+  - [x] When linking, please provide all links as full absolute links versus relative links
+  - [x] All information should be provided in markdown format (HTML does not render on Code4rena.com)
+- [x] Under the "Scope" heading, provide the name of each contract and:
+  - [x] source lines of code (excluding blank lines and comments) in each
   - [ ] external contracts called in each
   - [ ] libraries used in each
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [ ] Describe anything else that adds any special logic that makes your approach unique
-- [ ] Identify any areas of specific concern in reviewing the code
+- [x] Describe any novel or unique curve logic or mathematical models implemented in the contracts
+- [x] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
+- [x] Describe anything else that adds any special logic that makes your approach unique
+- [x] Identify any areas of specific concern in reviewing the code
 - [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
 - [ ] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
 - [ ] Delete this checklist and all text above the line below when you're ready.
@@ -78,46 +78,39 @@ To learn more about the Juicebox protocol, see our [docs](https://docs.juicebox.
 
 # Scope
 
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
-
-*For line of code counts, we recommend using [cloc](https://github.com/AlDanial/cloc).* 
-
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [`juice-buyback/contracts/JBXBuybackDelegate.sol`](juice-buyback/contracts/JBXBuybackDelegate.sol) | 160 | The buyback delegate | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) [`@jbx-protocol/juice-contracts-v3/*`](https://github.com/jbx-protocol/juice-contracts-v3) [`@paulrberg/contracts/math/PRBMath.sol`](https://github.com/PaulRBerg/prb-math) [`@uniswap/v3-core/*`](https://github.com/Uniswap/v3-core) [`@uniswap/v3-periphery/contracts/interfaces/external/IWETH9.sol`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/interfaces/external/IWETH9.sol) |
 
 ## Out of scope
 
-*List any files/contracts that are out of scope for this audit.*
+Other contracts.
 
 # Additional Context
 
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
-
-*Sponsor, please confirm/edit the information below.*
-
 ## Scoping Details 
+
 ```
 - If you have a public code repo, please share it here: [`juice-buyback`](https://github.com/jbx-protocol/juice-buyback/)
 - How many contracts are in scope?: 1
-- Total SLoC for these contracts?:  168
-- How many external imports are there?:  15
+- Total SLoC for these contracts?:  160
+- How many external imports are there?:  17
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  1
 - Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   5
-- What is the overall line coverage percentage provided by your tests?:  100
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   true
-- Please describe required context: Juicebox pay & redeem delegates  
-- Does it use an oracle?: No 
-- Does the token conform to the ERC20 standard?:  true
-- Are there any novel or unique curve logic or mathematical models?: none
-- Does it use a timelock function?: false
-- Is it an NFT?: false
-- Does it have an AMM?:   true
-- Is it a fork of a popular project?: false
-- Does it use rollups?: false
-- Is it multi-chain?: false
-- Does it use a side-chain?: false
+- How many external calls?: 5
+- What is the overall line coverage percentage provided by your tests?: 100
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: yes
+- Please describe required context: Juicebox [pay](https://docs.juicebox.money/dev/build/treasury-extensions/pay-delegate/) & [redeem](https://docs.juicebox.money/dev/build/treasury-extensions/redemption-delegate/) delegates
+- Does it use an oracle?: no
+- Does the token conform to the ERC20 standard?: yes
+- Are there any novel or unique curve logic or mathematical models?: no
+- Does it use a timelock function?: no
+- Is it an NFT?: no
+- Does it have an AMM?: yes
+- Is it a fork of a popular project?: no
+- Does it use rollups?: no
+- Is it multi-chain?: no
+- Does it use a side-chain?: no
 ```
 
 # Tests
