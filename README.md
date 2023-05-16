@@ -51,13 +51,13 @@ Other contracts.
 - How many external calls?: 5
 - What is the overall line coverage percentage provided by your tests?: 100
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: yes
-- Please describe required context: Juicebox [pay](https://docs.juicebox.money/dev/build/treasury-extensions/pay-delegate/) & [redeem](https://docs.juicebox.money/dev/build/treasury-extensions/redemption-delegate/) delegates
+- Please describe required context: [Pay delegates](https://docs.juicebox.money/dev/build/treasury-extensions/pay-delegate/) and [data sources](https://docs.juicebox.money/dev/learn/glossary/data-source/).
 - Does it use an oracle?: no
 - Does the token conform to the ERC20 standard?: yes
 - Are there any novel or unique curve logic or mathematical models?: no
 - Does it use a timelock function?: no
 - Is it an NFT?: no
-- Does it have an AMM?: yes
+- Does it have an AMM?: no
 - Is it a fork of a popular project?: no
 - Does it use rollups?: no
 - Is it multi-chain?: no
@@ -77,8 +77,6 @@ A [pay delegate](https://docs.juicebox.money/dev/learn/glossary/delegate/) inclu
 `juice-buyback` is an `IJBPayDelegate` *and* an `IJBFundingCycleDataSource`.
 
 # Tests
-
-Anyone can deploy `juice-buyback` using the provided forge script.
 
 To run this repo, you'll need [Foundry](https://book.getfoundry.sh/) and [NodeJS](https://nodejs.dev/en/learn/how-to-install-nodejs/) installed.
 
