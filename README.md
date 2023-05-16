@@ -47,11 +47,11 @@ Other contracts.
 - Total SLoC for these contracts?:  160
 - How many external imports are there?:  17
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  1
-- Does most of your code generally use composition or inheritance?:   
+- Does most of your code generally use composition or inheritance?: Inheritance
 - How many external calls?: 5
 - What is the overall line coverage percentage provided by your tests?: 100
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: yes
-- Please describe required context: [Pay delegates](https://docs.juicebox.money/dev/build/treasury-extensions/pay-delegate/) and [data sources](https://docs.juicebox.money/dev/learn/glossary/data-source/).
+- Please describe required context: [Payment terminals](https://docs.juicebox.money/dev/learn/glossary/payment-terminal/), [pay delegates](https://docs.juicebox.money/dev/build/treasury-extensions/pay-delegate/), and [data sources](https://docs.juicebox.money/dev/learn/glossary/data-source/).
 - Does it use an oracle?: no
 - Does the token conform to the ERC20 standard?: yes
 - Are there any novel or unique curve logic or mathematical models?: no
