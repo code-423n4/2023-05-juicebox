@@ -1,39 +1,5 @@
-# ✨ So you want to sponsor a contest
-
-This `README.md` contains a set of checklists for our contest collaboration.
-
-Your contest will use two repos: 
-- **a _contest_ repo** (this one), which is used for scoping your contest and for providing information to contestants (wardens)
-- **a _findings_ repo**, where issues are submitted (shared with you after the contest) 
-
-Ultimately, when we launch the contest, this contest repo will be made public and will contain the smart contracts to be reviewed and all the information needed for contest participants. The findings repo will be made public after the contest report is published and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
-
----
-
-## ⭐️ Sponsor: Edit this README
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [x] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [x] When linking, please provide all links as full absolute links versus relative links
-  - [x] All information should be provided in markdown format (HTML does not render on Code4rena.com)
-- [x] Under the "Scope" heading, provide the name of each contract and:
-  - [x] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [x] libraries used in each
-- [x] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [x] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [x] Describe anything else that adds any special logic that makes your approach unique
-- [x] Identify any areas of specific concern in reviewing the code
-- [x] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [x] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
-
 # Juicebox Buyback Delegate contest details
+
 - Total Prize Pool: $24,500 USDC 
   - HM awards: 17,000 USDC
   - QA report awards: $1,000 USDC 
@@ -52,8 +18,6 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 Automated findings output for the contest can be found [here](add link to report) within 24 hours of contest opening.
 
 *Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
-
-[ ⭐️ SPONSORS ADD INFO HERE ]
 
 # Overview
 
