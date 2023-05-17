@@ -93,5 +93,5 @@ cd 2023-05-juicebox/juice-buyback
 npm install
 
 # Run tests
-forge test
+forge test --gas-report
 ```
