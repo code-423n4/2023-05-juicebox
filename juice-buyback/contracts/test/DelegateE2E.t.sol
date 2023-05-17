@@ -85,7 +85,7 @@ contract TestIntegrationJBXBuybackDelegate is Test, UniswapV3ForgeQuoter {
   uint256 amountOutForOneEth;
 
   function setUp() public {
-    vm.createSelectFork("https://rpc.ankr.com/eth", 17239357);
+    vm.createSelectFork(vm.envString("RPC_MAINNET_URL"), 17239357);
 
     // Collect the mainnet deployment addresses
     jbEthPaymentTerminal = IJBPayoutRedemptionPaymentTerminal3_1(
