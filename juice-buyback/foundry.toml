@@ -1,7 +1,7 @@
 [profile.default]
 src = 'contracts'
 out = 'out'
-libs = ['lib']
+libs = ['lib', 'node_modules']
 fs_permissions = [{ access = "read", path = "./node_modules/@jbx-protocol/juice-contracts-v3/deployments/mainnet"}] # Get the deployment addresses for forking
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
