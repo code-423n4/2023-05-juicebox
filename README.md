@@ -1,8 +1,9 @@
 # Juicebox Buyback Delegate audit details
 
 - Total Prize Pool: $24,500 USDC 
-  - HM awards: 17,000 USDC
+  - HM awards: 15,000 USDC
   - QA report awards: $1,000 USDC 
+  - Bot Race report awards: $2,000 USDC
   - Gas report awards: $2,000 USDC 
   - Judge awards: $2,400 USDC
   - Lookout awards: $1,600 USDC 
