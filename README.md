@@ -90,7 +90,7 @@ git clone https://github.com/code-423n4/2023-05-juicebox.git
 cd 2023-05-juicebox/juice-buyback
 
 # Install dependencies
-npm install && git submodule update --init --force --recursive
+npm install
 
 # Run tests
 forge test

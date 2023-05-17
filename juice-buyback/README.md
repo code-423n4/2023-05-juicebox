@@ -20,7 +20,7 @@ NB: The whole amount contributed will be swapped, including what should be consi
 ## Usage
 Anyone can deploy this delegate using the provided forge script.
 To run this repo, you'll need [Foundry](https://book.getfoundry.sh/) and [NodeJS](https://nodejs.dev/en/learn/how-to-install-nodejs/) installed.
-Install the dependencies with `npm install && git submodule update --init --force --recursive`, you should then be able to run the tests using `forge test` or deploy a new delegate using `forge script Deploy` (and the correct arguments, based on the chain and key you want to use - see the [Foundry docs](https://book.getfoundry.sh/)).
+Install the dependencies with `npm install`, you should then be able to run the tests using `forge test` or deploy a new delegate using `forge script Deploy` (and the correct arguments, based on the chain and key you want to use - see the [Foundry docs](https://book.getfoundry.sh/)).
 
 ## Use-case
 Maximizing the project token received by the contributor while leveling the funding cycle/secondary market price.
