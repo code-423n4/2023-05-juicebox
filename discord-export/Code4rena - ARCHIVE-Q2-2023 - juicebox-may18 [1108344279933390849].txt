@@ -1,0 +1,1476 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2023 / juicebox-may18
+==============================================================
+
+[05/17/2023 10:48] paroxysm9999 (pinned)
+👋 Hello and welcome to the audit channel for the $24,500 **Juicebox Buyback Delegate** audit!
+
+📆 Audit opens 05/18/2023 20:00 (20:00 UTC) and runs through 05/22/2023 20:00 (20:00 UTC) (4 days).
+
+Please give a warm welcome to the Juicebox team, particularly @0xBA5ED, @jango, @Dr. Go, & @Viraz, who will be available for questions either here in the channel or via DM in the EST timezone.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-05-juicebox-buyback-delegate
+
+{Embed}
+https://code4rena.com/contests/2023-05-juicebox-buyback-delegate
+Code4rena Juicebox Buyback Delegate
+$24,500 USDC
+18 May 2023—22 May 2023
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/c4-og-banner-0FCFA.png
+
+{Reactions}
+🔥 (9) 
+
+[05/17/2023 10:49] paroxysm9999
+Pinned a message.
+
+
+[05/17/2023 10:49] paroxysm9999
+:hearteyesrobot: 🏎️  Automated findings output for the audit will be posted within 24 hours of audit opening. :hearteyesrobot: 🏎️
+
+{Reactions}
+✅ (8) 👍 (2) 
+
+[05/17/2023 10:50] paroxysm9999
+Let's please limit conversation until the audit begins. Thanks!
+
+{Reactions}
+✅ (15) 
+
+[05/18/2023 20:04] 0xElvisC0stell0#2459
+GL to all and Happy Hunting!
+
+{Reactions}
+🤝 
+
+[05/18/2023 20:05] nk6b29ba
+lets gooooo
+
+{Reactions}
+👍 
+
+[05/18/2023 21:19] dontonka
+i clone the repo but `npm install` doesnt work, anyone or only me ?
+
+
+[05/18/2023 21:19] auditsea
+it worked for me, what's your node and npm version?
+
+
+[05/18/2023 21:20] sovaslava9
+go to folder inside
+
+
+[05/18/2023 21:20] sovaslava9
+"// Retrieve the fc reserved rate and reset the mutex" - what is fc ?
+
+{Reactions}
+👆 
+
+[05/18/2023 21:20] dontonka
+ah ok i was not in the proper folder 😸, my bad lol
+
+
+[05/18/2023 21:23] auditsea
+funding cycle
+
+{Reactions}
+🙏🏼 (3) 
+
+[05/18/2023 21:27] filipvv (pinned)
+Welcome to the audit. If you have any questions, I recommend checking our developer docs: <https://docs.juicebox.money/dev/>
+
+The glossary is a great resource as well: <https://docs.juicebox.money/dev/learn/glossary/>
+
+You can also ask questions in the JuiceboxDAO Discord server: <https://discord.gg/juicebox>
+
+Otherwise, feel free to message the people tagged above.
+
+{Reactions}
+✌🏼 (9) 
+
+[05/18/2023 21:39] drgorilla.eth
+Hi everyone!
+
+{Reactions}
+C4Keycap hearteyesshark 👋 
+
+[05/18/2023 21:41] auditsea
+:hi5:
+
+{Reactions}
+quint (3) 
+
+[05/18/2023 21:41] drgorilla.eth
+This is strange, wdym by “doesn’t work”?
+
+
+[05/18/2023 21:44] drgorilla.eth
+(You need to be in the juice-buyback folder btw, not the root of the repo;)
+
+
+[05/18/2023 22:13] 0xkazimm
+did this contract work with all type of ERC20 token or only designed for ETH ?!
+
+
+[05/19/2023 00:08] yellowbirby
+I can’t overstate how much I like these docs
+
+{Reactions}
+❤️ (4) 
+
+[05/19/2023 01:04] filipvv (pinned)
+The Juicebox protocol allows projects to add multiple terminals for different currencies, but this delegate only supports the ETH terminal.
+
+See <https://docs.juicebox.money/dev/learn/glossary/payment-terminal/>
+
+
+[05/19/2023 02:03] 0xstalin
+Pardon me for this noobie question, but what is the purpose of `_projectTokenIsZero`?
+
+
+[05/19/2023 02:04] josh4324
+Has anyone tried running the test, I am getting  incompatible solidity versions
+
+
+[05/19/2023 02:28] kartoonjoy
+Pinned a message.
+
+
+[05/19/2023 02:29] kartoonjoy
+Pinned a message.
+
+
+[05/19/2023 02:42] 0xjuntao
+indicates if projectToken is token0 in uniswap pool
+
+{Reactions}
+🙏🏼 👍 
+
+[05/19/2023 03:06] filipvv
+Tests running fine for me with `forge test`. Could you share your error message?
+
+
+[05/19/2023 03:31] 0xstalin
+aaah. now makes sense, thanks for answering
+
+
+[05/19/2023 03:41] comradektg
+hi @filipv I also received error running tests, Here is part of the log "Discovered incompatible solidity versions in following
+: contracts/test/DelegateE2E.t.sol (^0.8.16) imports:
+    contracts/interfaces/external/IWETH9.sol (^0.8.0)
+    contracts/test/helpers/TestBaseWorkflowV3.sol (^0.8.16)"
+
+
+[05/19/2023 03:41] comradektg
+Can you check?
+
+
+[05/19/2023 03:44] comradektg
+Also which forge version do you use?
+
+
+[05/19/2023 03:51] comradektg
+@Josh4324 The issue is resolved by installing the latest version of forge, you can try that
+
+{Reactions}
+🙏🏼 (2) 
+
+[05/19/2023 06:05] 0xstalin
+@0xBA5ED @jango @Dr. Go @Viraz If we were to make a reference to a line of code of one of the contracts of the @jbx-protocol package, what github repo should we use?
+Note: The reference is just a matter of explaining and referencing certain variables, not a direct issue or something wrong
+
+
+[05/19/2023 07:03] csjaybit
+yeah docs are really good
+
+{Reactions}
+💯 
+
+[05/19/2023 07:30] redtiger_auditor
+Hello! Why Burn, mint, and Burn again If swap is privilegied... ? Why not simply do the swap, and take the percentage of reserved Tokens from the amount swapped ?
+
+{Reactions}
+✅ (4) 
+
+[05/19/2023 07:53] drgorilla.eth
+Please use the c4 one (I guess that's in their doc)
+
+
+[05/19/2023 07:54] mariodev__
+can't get the imports to work... clones, npm installed, and still imports are broken, cant run tests. I'm in the right directory
+
+
+[05/19/2023 07:54] drgorilla.eth
+reserved are not minted (before being distributed at least), they're tracked internally and added when minting (from terminal.pay(..) usually) -> this is the hacky trick to add token to the reserve tracker
+
+https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/JBController3_1.sol#L146
+
+
+[05/19/2023 07:54] drgorilla.eth
+have you run foundryup ?
+
+
+[05/19/2023 07:54] mariodev__
+yes that too
+
+
+[05/19/2023 07:55] drgorilla.eth
+what error do you get?
+
+
+[05/19/2023 07:55] mariodev__
+imports not found
+
+
+[05/19/2023 07:56] mariodev__
+I'm doing everything again just in case
+
+
+[05/19/2023 07:56] drgorilla.eth
+but which one? I can't reproduce when cloning from c4 repo
+
+
+[05/19/2023 07:57] drgorilla.eth
++ CI worked too: https://github.com/jbx-protocol/juice-buyback/actions/runs/5000884886/jobs/8958861253
+
+
+[05/19/2023 07:57] mariodev__
+something i must have done wrongly
+
+
+[05/19/2023 07:57] mariodev__
+works know
+
+{Reactions}
+yes 
+
+[05/19/2023 07:57] mariodev__
+sorry, my bad
+
+
+[05/19/2023 08:02] 0xstalin
+@Dr. Go 
+But I'm talking about the contracts that are imported into the `JBXBuybackDelegate.sol`, which seems to be the only contract of the C4 repo
+
+I'm talking about this one for example `import "@jbx-protocol/juice-contracts-v3/contracts/libraries/JBFundingCycleMetadataResolver.sol";`
+
+
+[05/19/2023 08:03] 0xjuntao
+@Dr. Go  dmed please check
+
+
+[05/19/2023 08:03] 0xstalin
+I'd like to make references to some of the logic of those contracts to validate my argument of why what I'm reporting is a valid vulnerability in the `JBXBuybackDelegate.sol` contract
+
+
+[05/19/2023 08:08] drgorilla.eth
+These are out of scope, so the only repo they're living in is the jbx one -> feel free to use that one then:)
+
+
+[05/19/2023 08:08] drgorilla.eth
+https://github.com/jbx-protocol/juice-contracts-v3
+
+
+[05/19/2023 08:11] 0xstalin
+yeaah, this is what I was looking for, thanks for sharing, I'll use it to make references during the explanation of the issue/attack vector that happens on the contract in scope 🚀
+
+
+[05/19/2023 08:17] redtiger_auditor
+Thanks!
+
+
+[05/19/2023 08:17] drgorilla.eth
+Just added the link in op
+
+
+[05/19/2023 08:38] kawaicho
+can someone give me a link how to install forge, because i got this error when i run forge --gas-reports: forge : The term 'forge' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+
+[05/19/2023 08:44] martin7096
+How can I see the known issues?
+
+
+[05/19/2023 08:45] parsely.
+https://book.getfoundry.sh/getting-started/installation
+
+{Embed}
+https://book.getfoundry.sh/getting-started/installation
+Foundry Book
+A book on all things Foundry
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/card-24F4E.png
+
+{Reactions}
+❤️ (2) 
+
+[05/19/2023 08:45] mis4nthr0pic
+@parsely is such a hero
+
+{Reactions}
+🙏 (3) 
+
+[05/19/2023 08:54] parsely.
+On the contest page the bot findings will be published as soon as they are available, lower in the page is links to previous audits: https://code4rena.com/contests/2023-05-juicebox-buyback-delegate
+
+{Embed}
+https://code4rena.com/contests/2023-05-juicebox-buyback-delegate
+Code4rena Juicebox Buyback Delegate
+$24,500 USDC
+18 May 2023—22 May 2023
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/c4-og-banner-0FCFA.png
+
+{Reactions}
+👍 
+
+[05/19/2023 09:02] christina0494
+Is there a reason why the contract is `Ownable`? There seem to be no functions that are privileged to the owner and the owner's address is not used anywhere... @filipv
+
+
+[05/19/2023 09:10] drgorilla.eth
+This is indeed an unused import (leftover from previous version iirc)
+
+{Reactions}
+👍🏻 (2) 
+
+[05/19/2023 09:11] christina0494
+thanks
+
+{Reactions}
+🍌 
+
+[05/19/2023 09:14] kawaicho
+yea okay, but when i try to install "curl -L https://foundry.paradigm.xyz | bash" i got this error: Invoke-WebRequest : A parameter cannot be found that matches parameter name 'L'.
+
+
+[05/19/2023 09:15] parsely.
+Which operating system are you using?
+
+
+[05/19/2023 09:19] parsely.
+if it's windows just double check on the installation page:
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/Screenshot_from_2023-05-19_11-18-40-5CF44.png
+
+
+[05/19/2023 09:21] parsely.
+or you could use it as a docker container too if that might help
+
+
+[05/19/2023 09:24] benrai
+Where can I find the contract code for the jbxTerminal that can call the didPay() function? I can't seam to find it neither in the repo of the contest nor in the repo of the bx-protocol/juice-contracts-v3 repo
+
+
+[05/19/2023 09:29] rickardlarsson6
+No automated findings?
+
+
+[05/19/2023 09:29] benrai
+They will be published 24 hours after the contest started
+
+
+[05/19/2023 09:30] _0xfanz
+https://github.com/search?q=repo%3Ajbx-protocol%2Fjuice-contracts-v3%20didPay&type=code
+
+{Embed}
+https://github.com/search?q=repo%3Ajbx-protocol%2Fjuice-contracts-v3%20didPay&type=code
+Build software better, together
+GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 330 million projects.
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/github-logo-EE79A.png
+
+
+[05/19/2023 09:37] rickardlarsson6
+Thanks!
+
+
+[05/19/2023 09:41] benrai
+Thanks! 🙂
+
+{Reactions}
+👍 
+
+[05/19/2023 09:54] drgorilla.eth (pinned)
+It's not part of this repo/out of scope (please check the pinned doc too for more high level info), here is the logic in code:
+
+> `JBPayoutRedemptionPaymentTerminal3_1.pay(..)` calls the terminal store to record the payment (and the terminal store triggers a data source call, ie payParams(..), if any):
+> 
+> pay calling the terminal store: https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol#L1470
+> 
+> terminal store optionnal call to the datasource: https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/JBSingleTokenPaymentTerminalStore3_1.sol#L370
+> 
+> 
+> This call returns a delegate allocation, with an address -> if there is a delegate, it is called in the rest of the `pay(..)` flow, here: 
+> https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol#L1496
+> 
+> https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol#L1532
+
+{Reactions}
+10_10 (3) ✌🏼 (6) 
+
+[05/19/2023 10:07] 0xhati
+Who is typically initiating a payment?
+
+
+[05/19/2023 10:14] benrai
+Thanks for the clarification 🙂
+
+{Reactions}
+🍌 
+
+[05/19/2023 10:19] noro9954
+what is the difference between `JBETHERC20ProjectPayer` and payment terminals ?
+
+
+[05/19/2023 10:21] drgorilla.eth
+Project payer is just an abstraction on top, to have, for instance, an address where one can send some eth (then the fallback handles paying to a terminal, etc)
+
+{Reactions}
+👌🏼 
+
+[05/19/2023 10:21] drgorilla.eth
+Either contributors/EOA or other project (when paying the protocol fee, which happens when they distribute payouts, if the funds leave the ecosystem)
+
+{Reactions}
+👍 
+
+[05/19/2023 10:22] benrai
+@Dr. Go sent you a DM
+
+
+[05/19/2023 10:23] drgorilla.eth
+@BenRai to answer your DM, the call to payParam is the first part (it’s the datasource)
+
+
+[05/19/2023 10:24] drgorilla.eth
+Edited for clarity
+
+
+[05/19/2023 10:59] lourenslinde
+Dunno if this may help you, but the entire juicebox protocol’s code is available under `node_modules/@jbxprotocol` after you've set up your env.
+
+Makes it a bit easier to make sense of the flow and other contracts.
+
+
+[05/19/2023 11:07] benrai
+Thanks, I will have a look at it 🙂
+
+
+[05/19/2023 11:09] auditsea
+What is `preferClaimedToken` for?
+
+
+[05/19/2023 11:54] madalad
+@Dr. Go DMd 🙂
+
+
+[05/19/2023 11:57] noro9954
+what is the quote parameter ?
+
+
+[05/19/2023 12:19] bloqarl
+In case anyone finds it helpful
+
+https://twitter.com/TheBlockChainer/status/1659521824940515330?s=20
+
+{Embed}
+bloqarl (@TheBlockChainer)
+https://twitter.com/TheBlockChainer/status/1659521824940515330?s=20
+I've gathered some relevant information about @juiceboxETH protocol 
+
+which might be useful to get an understanding of what the protocol is about
+
+Also, managed to share, not much, but a bit of information about the smart contract in scope of this audit
+
+https://t.co/mCBjsw2n86
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/Fwb5pSyWcBc4VCz-3F356.jpg
+Twitter
+
+{Reactions}
+✅ (2) 🔥 (4) 
+
+[05/19/2023 12:24] thenaubit
+thanks!
+
+{Reactions}
+♥️ 
+
+[05/19/2023 12:41] co0nan
+In the test file the call to pay function :
+
+```
+jbETHPaymentTerminal().pay{value: payAmountInWei}(
+      _projectId,
+      payAmountInWei,
+      address(0),
+      beneficiary(),
+      0,
+      false,
+      'Take my money!',
+      metadata
+    );
+``` 
+
+Seems not following the same order as the docs here :https://docs.juicebox.money/dev/api/interfaces/ijbprojectpayer/#pay
+
+is it the correct function ?
+
+
+[05/19/2023 12:43] 0xhati
+it's being called on the terminal
+
+
+[05/19/2023 12:43] 0xhati
+not the projectpayer
+
+
+[05/19/2023 12:43] 0xhati
+https://docs.juicebox.money/dev/api/interfaces/ijbpaymentterminal/
+
+{Embed}
+https://docs.juicebox.money/dev/api/interfaces/ijbpaymentterminal/
+IJBPaymentTerminal | Juicebox Docs
+Code
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/unfurl-96208.png
+
+{Reactions}
+👍 
+
+[05/19/2023 12:43] co0nan
+Got it from he repo : https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/interfaces/IJBPaymentTerminal.sol#L16 
+
+Thanks!
+
+{Reactions}
+👍 
+
+[05/19/2023 13:21] itsmetechjay (pinned)
+Wardens - please note that the automated findings output (AKA the winning bot race report 🏆, submitted by @IllIllI) is posted below. 
+
+These are considered publicly known issues and are not eligible for awards.
+
+**🤖 Automated findings: **
+https://gist.github.com/itsmetechjay/2efc963de59bcad62e69de48171d10ca
+
+**📄 Code4rena submission guidelines and automated findings policy: **
+https://docs.code4rena.com/roles/wardens/submission-policy#automated-findings-ineligible
+
+The above link has also been added to the contest README.
+
+{Reactions}
+✌🏼 (3) 🙏🏻 
+
+[05/19/2023 13:21] itsmetechjay
+Pinned a message.
+
+
+[05/19/2023 14:15] dontonka
+yea ik, that was the issue. all good
+
+
+[05/19/2023 14:17] sovaslava9
+Is it correct flow?
+1. User call payParams()
+2. User call didPay througth terminal?
+
+
+[05/19/2023 14:20] dadekuma
+I've asked this question -- both are called by the terminal, and the transaction is atomic
+
+{Reactions}
+🙏🏼 (5) 
+
+[05/19/2023 14:24] drgorilla.eth
+https://discord.com/channels/810916927919620096/1108344279933390849/1109056413562572820
+
+
+[05/19/2023 14:28] kartoonjoy
+Pinned a message.
+
+
+[05/19/2023 14:31] filipvv (pinned)
+By default, tokens balances stored within `JBTokenStore` (not as an ERC-20). Projects can optionally issue an ERC-20 token for their holders to claim, but this incurs larger gas fees. 
+
+If `preferClaimedToken` is true, the ERC-20 tokens (called "claimed tokens") will be minted if possible. The "unclaimed tokens" are the balances tracked within the token store.
+
+See <https://docs.juicebox.money/dev/learn/glossary/tokens/> <https://docs.juicebox.money/dev/learn/glossary/token-store/>
+
+{Reactions}
+✅ (3) 
+
+[05/19/2023 14:37] kartoonjoy
+Pinned a message.
+
+
+[05/19/2023 14:37] marckn
+what is sqrtPriceX96 (sqrtPriceX96 = sqrt(1*10**18 << 192 / 69420*10**18) = 300702666377442711115399168 (?))
+
+
+[05/19/2023 14:51] marckn
+it seems to be the exchange rate ETH/JBX
+
+
+[05/19/2023 15:02] nobody2018
+@filipv Users can buy tokens in the v3 pool, why buy through jbEthPaymentTerminal.pay?
+
+{Reactions}
+👆 
+
+[05/19/2023 15:06] nobody2018
+@filipv ReservedRate has to be deducted through jbEthPaymentTerminal.pay.
+
+
+[05/19/2023 15:06] filipvv
+The buyback delegate will find the most effective price between the v3 pool and direct issuance from the project. Although the pool is much more cost effective for the time being, this may change in the future.
+
+Additionally, protocol fees are paid via the terminal's `pay(...)` function (to the DAO's project, <https://juicebox.money/@juicebox>). This means people will receive more JBX when paying fees if the pool has a cheaper price than the project's issuance rate. It also means that less JBX will be issued.
+
+See <https://docs.juicebox.money/dao/reference/jbx/#about-fees>.
+
+{Reactions}
+✌🏼 
+
+[05/19/2023 15:07] 0xjuancito
+Who deploys the `JBXBuybackDelegate` contracts? How is it deployed?
+
+{Reactions}
+👆 
+
+[05/19/2023 15:10] nobody2018
+@filipv For example: I bought 10,000 tokens directly from the pool and spent 1eth. I bought 10,000 tokens indirectly from the pool through jbEthPaymentTerminal.pay and spent 1eth, but I didn't get 10,000 tokens because the reservedRate was deducted.
+
+
+[05/19/2023 15:12] filipvv
+I don't think it's important who deploys the contract, but I might be incorrect about that.
+
+If approved by JuiceboxDAO governance, it will be attached to the project via `JBController3_1.reconfigureFundingCyclesOf(...)` (passed within `_metadata`).
+
+See <https://docs.juicebox.money/dev/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof>
+
+{Reactions}
+✅ 
+
+[05/19/2023 15:13] filipvv
+Yes – people looking to independently buy JBX will most likely do so elsewhere for now. The buyback delegate will be most relevant for Juicebox project owners who pay fees.
+
+
+[05/19/2023 16:06] dec3ntraliz3d
+Is there additional explanation on reserve , non reserve tokens, burning mechanism etc.  I am referring to the _swap function 
+
+```
+**
+     * @notice Swap the terminal token to receive the project token_beforeTransferTon
+     *
+     * @dev    This delegate first receive the whole amount of project token,
+     *         then send the non-reserved token to the beneficiary,
+     *         then burn the rest of this delegate balance (ie the amount of reserved token),
+     *         then mint the same amount as received (this will add the reserved token, following the fc rate)
+     *         then burn the difference (ie this delegate balance)
+     *         -> End result is having the correct balances (beneficiary and reserve), according to the reserve rate
+
+
+```
+
+
+[05/19/2023 16:34] 0xhati
+https://docs.juicebox.money/dev/learn/glossary/reserved-tokens/
+
+{Embed}
+https://docs.juicebox.money/dev/learn/glossary/reserved-tokens/
+Reserved tokens | Juicebox Docs
+What everyone needs to know
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/unfurl-96208.png
+
+{Reactions}
+🙏🏼 
+
+[05/19/2023 16:35] patricksfeir
+how can I fix it ?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/Screenshot_440-9D743.png
+
+
+[05/19/2023 16:37] drgorilla.eth
+See Uni V3 docs;)
+
+
+[05/19/2023 16:38] coffiasd
+May i ask who will call the {pay} function in JBPayoutRedemptionPaymentTerminal3_1 , and the  paid token information in _metadata fixed ?
+
+
+[05/19/2023 16:50] 0xstalin
+I can see you are running the command on the Powershell terminal, which is the Windows terminal.
+I don't know how much of a pain is forge running in Windows, but if you have wsl, I'd suggest you run foundry in there, I just cloned the repo and ran the Foundry test without getting any errors
+
+
+[05/19/2023 17:05] janestebans
+I've also had problems in the past with windows and forge. Using rn on vm with linux with far less problmes
+
+
+[05/19/2023 17:11] pfapostol
+There is no problem with foundry in windows.
+
+
+[05/19/2023 17:12] janestebans
+I imagine it works properly. But I find it easier to get things wrong in win than lin
+
+
+[05/19/2023 17:14] pfapostol
+Maybe a setup problem, I switched to windows from wsl 2 months ago and haven't had any problems since.
+
+
+[05/19/2023 17:22] brahma7456
+hello experienced auditors, This will be my first contest. is it good contest to start as a beginner? Thanks
+
+
+[05/19/2023 17:25] pfapostol
+Terrible, not much code in the scope, but a lot to learn to understand it.
+
+
+[05/19/2023 17:26] pfapostol
+But still try, the important thing in audit is to learn constantly
+
+{Reactions}
+C4Keycap (10) 
+
+[05/19/2023 17:27] brahma7456
+sure. Thanks Sir🤞
+
+
+[05/19/2023 17:29] sovaslava9
+Why @Viraz has only label - warden? not the sponsor?
+
+
+[05/19/2023 18:20] evokid
+Start with any code base dont be shy or afraid to begin with the unknown, later you would an idea any way
+
+{Reactions}
+C4Keycap 
+
+[05/19/2023 18:22] sovaslava9
+Where terminal call didPay() function? cant find this .. .https://github.com/search?q=repo%3Ajbx-protocol%2Fjuice-contracts-v3+didPay%28&type=code
+
+{Embed}
+https://github.com/search?q=repo%3Ajbx-protocol%2Fjuice-contracts-v3+didPay%28&type=code
+Build software better, together
+GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 330 million projects.
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/github-logo-EE79A.png
+
+
+[05/19/2023 18:26] 0xhati
+https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol#L1532
+
+{Embed}
+https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol
+juice-contracts-v3/JBPayoutRedemptionPaymentTerminal3_1.sol at 12d8...
+⚙️  Juicebox core V3 contracts. Contribute to jbx-protocol/juice-contracts-v3 development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/juice-contracts-v3-1B2C8
+
+{Reactions}
+🙏🏼 
+
+[05/19/2023 18:56] bronze_pickaxe
+wow the docs are great
+
+
+[05/19/2023 19:14] 0xflaming0
+Hello guys this is my first audit contest, excited to begin my journey! Anyone know what prior information i need to read to understand the context? Thanks.
+
+
+[05/19/2023 19:14] 0xflaming0
+do i need to read all the docs or just certain sections?
+
+
+[05/19/2023 19:24] 0xhati
+The readme is a good place to start, then if you see things that are not clear read up on them and go through the code, when you see more things you dont know, read about them. Dont read all the docs, you won't need everything. The project has excellent docs.
+
+{Reactions}
+♥️ 
+
+[05/19/2023 21:19] drgorilla.eth
+Maybe check the pinned msg;)
+
+
+[05/19/2023 21:21] drgorilla.eth
+Basically terminal.pay(..), terminalstore.recordPayment, data source and delegate are what’s used from our core contracts
+
+
+[05/19/2023 21:21] drgorilla.eth
+And this https://discord.com/channels/810916927919620096/1108344279933390849/1109056413562572820
+
+
+[05/19/2023 21:41] 0xflaming0
+Much appreciated friend 😊
+
+{Reactions}
+yes 
+
+[05/19/2023 22:24] 0xray44
+Thanks, this helps!
+
+
+[05/19/2023 22:32] niser93
+Hello guys! Could you help me about gas optimization? I would like to give you a good gas comparison table. I'm using "forge snapshot" for test gas report and "forge test --gas-report" for function gas report.
+I 've observed that there is random behavior of gas average in original JBXBuybackDelegate.didPay (its value could be 161926 or 161126 or 161811). Same happens with JBXBuybackDelegate.payParams.
+Could you suggest how to mitigate this? Otherwise, we could take in account only min/max value, or compute average of average.
+Thanks in advance
+
+
+[05/20/2023 00:52] 0xstalin
+I have a question about the bot findings, isn't the M-02 & M-03 about the same thing?
+M-03 looks like is the cause of the issue, and M-02 is the solution, use safeTransfer/safeTransferFrom() instead of their unsafe versions 🙂
+
+
+[05/20/2023 00:55] itsmetechjay
+https://discord.com/channels/810916927919620096/1093914558776758403/1109110911702143077
+
+
+[05/20/2023 00:55] 0xstalin
+aaah, looks like I wasn't the only one who thought about it, thanks for sharing the reference 🙂
+
+{Reactions}
+hi5 (2) 
+
+[05/20/2023 04:06] technovision99
+Can I dm someone?
+
+{Reactions}
+C4Keycap 
+
+[05/20/2023 06:39] drgorilla.eth
+Side note: these 3 findings presuppose custom token, while Juicebox project uses JBToken (OZ ERC20Vote) by default
+
+{Reactions}
+👍🏻 
+
+[05/20/2023 07:28] drgorilla.eth
+Sure
+
+
+[05/20/2023 10:38] drgorilla.eth (pinned)
+Ok, as I have a lot of related questions in DM about this, here is a quick schema of how this works -> the whole picture is a single transaction, calling pay(..) on the terminal.
+
+EOA or other project might call the function (either to participate in JbxDAO or when fees are collected)
+
+For the related code, see this previous message: https://discord.com/channels/810916927919620096/1108344279933390849/1109056413562572820
+
+Happy hunting!
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/delegate-BA89A.png
+
+{Reactions}
+thankyou (14) 🔥 (4) 
+
+[05/20/2023 10:45] csjaybit
+dont understand why rebasing tokens vulnerability is medium? it should be Low vulnerability
+
+
+[05/20/2023 11:01] bytes032
+@TK | csjaybit
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/Screenshot_2023-05-20_at_2.01.39_PM-30419.png
+
+{Reactions}
+thankyou 
+
+[05/20/2023 11:01] bytes032
+its low
+
+
+[05/20/2023 11:12] csjaybit
+Thank you very much, it means i am becoming better at identifying vulnerabilities
+
+
+[05/20/2023 14:11] 0xumarkhatab
+Hi @Dr. Go  , i need to confirm one thing 
+
+This line in the constructor seems to have the purpose that `_projectToken`  paramter supplied is zero address , right ?
+
+_projectTokenIsZero = address(_projectToken) < address(_weth);
+
+
+[05/20/2023 14:19] coffiasd
+looks beautiful , may i ask what tool do u use to draw this pic ?
+
+
+[05/20/2023 14:51] viraz4331
+No that's the JBX token address check the E2E test
+
+
+[05/20/2023 15:00] 0xumarkhatab
+what is that E2E test ?
+
+
+[05/20/2023 15:17] favelanky
+excalidraw
+
+{Reactions}
+this 🎉 
+
+[05/20/2023 15:32] drgorilla.eth
+No, this is ordering the token addresses (same as Uniswap v2 or v3), the smallest address being token0 in an Uniswap pool -> this just put this as an immutable for gas saving (“is the project token the token0 in the pool?”)
+
+
+[05/20/2023 15:59] 0xumarkhatab
+but how come the comparison with < does that ?
+
+
+[05/20/2023 16:00] 0xumarkhatab
+okey
+
+
+[05/20/2023 16:00] drgorilla.eth
+Same as 1<2 works 😅
+
+
+[05/20/2023 16:00] 0xumarkhatab
+i think i got you
+
+
+[05/20/2023 16:00] 0xumarkhatab
+the small address will be the token0 ?
+
+
+[05/20/2023 16:01] 0xumarkhatab
+i have to withdraw my finding then : ////
+
+
+[05/20/2023 16:08] drgorilla.eth
+That’s the idea at least, I let you judge the implementation 😄
+
+
+[05/20/2023 16:10] 0xumarkhatab
+got that .
+Thank you so much
+
+
+[05/20/2023 16:19] aba1842
+@Dr. Go I DM you, whenever you have some time
+
+
+[05/20/2023 17:14] kartoonjoy
+Pinned a message.
+
+
+[05/20/2023 17:26] 0xumarkhatab
+sent you a DM sir
+
+
+[05/20/2023 17:33] drgorilla.eth
+If I don’t answer quickly enough, feel free to do a group dm with the other ones ( @jango @filipv  @0xBA5ED @Viraz ;), lots of dm to still process😅
+
+
+[05/20/2023 18:03] favelanky
+Is someone succeeded with running Slither on this repo?
+
+
+[05/20/2023 18:15] technovision99
+Yeah
+
+{Reactions}
+👍 
+
+[05/20/2023 20:05] marckn
+End to End Testing ?
+
+{Reactions}
+this 
+
+[05/20/2023 21:03] marckn
+what contract can call pay - it has the isTerminalOf(_projectId) modifier. Meaning only children from the abstract class can call this function, like jBETHPaymentTerminal3_1?
+
+
+[05/20/2023 21:48] drgorilla.eth
+this is out of scope imo, but this modifier only check you're using the correct terminal for a given project ID
+
+https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol#L68
+
+{Reactions}
+👍🏻 
+
+[05/20/2023 21:49] drgorilla.eth
+any EOA or contract can call pay(..)
+
+{Reactions}
+👍🏻 
+
+[05/20/2023 22:42] audityourcontracts
+I got it to run with `slither contracts/ --solc-remaps "@=node_modules/@ prb-math/=node_modules/prb-math/" --triage`
+
+
+[05/21/2023 06:06] viraz4331
+yep exactly
+
+
+[05/22/2023 01:30] brianspha
+GM,GD,DA,GE, is it safe to assume that any bug found due to this:[M‑03] Return values of transfer()/transferFrom() not checked
+ are invalid? @Dr. Go
+
+
+[05/22/2023 02:46] smartgooofy
+What do these letters from the judge stand for ? L, NC, Dup 05, I, R ?
+
+
+[05/22/2023 02:57] _3agle
+L: Low
+NC: Non-critical
+Dup: Duplicate
+I: Informational
+R: Refactor
+
+{Reactions}
+❤️ (4) 
+
+[05/22/2023 05:16] qpzm
+What is the advantage of burn/mint/burn compared to transfer?
+> The delegate will then burn/mint/burn again the non-transfered to account for the reserved tokens (ie burn them all, then mint an amount which will return the correct amount of reserved token, then burn the non-reserved token just minted)
+https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/README.md#design
+
+
+[05/22/2023 07:21] drgorilla.eth
+https://discord.com/channels/810916927919620096/1108344279933390849/1109369687080439870
+
+
+[05/22/2023 07:22] drgorilla.eth
+https://discord.com/channels/810916927919620096/1108344279933390849/1109026190775300147
+
+{Reactions}
+👍 
+
+[05/22/2023 07:57] dmtrbch
+Is the memo parameter which is sent from the terminal pay function all the way through payParams function, displayed on the front-end?
+
+
+[05/22/2023 08:08] drgorilla.eth
+iirc, we take it from the Pay event in our subgraph https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol#LL1556C13-L1556C13
+
+{Reactions}
+👍 
+
+[05/22/2023 08:10] drgorilla.eth
+(and so yes, it's the same carried accross -> we modify it in other types of delegate)
+
+
+[05/22/2023 08:12] drgorilla.eth
+here, we couldn't overwrite it to, for isntance, append "- swapped on UniV3" at the end, as the swap might still reverts in did Pay (still to do, but we'll rather index the swap/mint event themselves)
+
+
+[05/22/2023 08:12] drgorilla.eth
+(side note tho, not relevant here:)
+
+
+[05/22/2023 08:47] prapandey031
+Sent you a DM @Dr. Go 
+Thanks
+
+{Reactions}
+yes 
+
+[05/22/2023 09:19] drgorilla.eth
+Answered!
+Basically: if you think you've found something, just submit the finding I guess 😄
+
+{Reactions}
+👍 
+
+[05/22/2023 09:58] smartgooofy
+// Swap succeded, take note of the amount of projectToken received (negative as it is an exact input)
+            _amountReceived = uint256(-(_projectTokenIsZero ? amount0 : amount1));
+
+Why is the value of amount0 and amount1 negated here ? I apologise if it is a dumb question but this is the first time I am checking in a uniswap project
+
+
+[05/22/2023 09:59] drgorilla.eth
+https://docs.uniswap.org/contracts/v3/reference/core/interfaces/callback/IUniswapV3SwapCallback
+
+{Reactions}
+❤️ (2) 
+
+[05/22/2023 12:27] dadekuma
+@Dr. Go DMed
+
+{Reactions}
+🍌 
+
+[05/22/2023 12:54] madalad
+@Dr. Go DMd 🙂
+
+{Reactions}
+🍌 
+
+[05/22/2023 13:21] shubh0412
+@Dr. Go DMed
+
+{Reactions}
+🍌 
+
+[05/22/2023 14:24] dec3ntraliz3d
+`preferClaimedTokens`  is set `true` when user prefers to get tokens via the swap. Is my understanding correct ? I am trying to figure out what is the advantage to setting this flag instead of always checking the market price. If the market price is cheap shouldn't it always be better for the user ?
+
+
+[05/22/2023 14:49] filipvv
+See https://discord.com/channels/810916927919620096/1108344279933390849/1109136691622584350
+
+{Reactions}
+🙏🏼 
+
+[05/22/2023 15:02] 0x0oz
+where can I find calls to `payParams()` and `didPay()`?
+are they atomic?
+
+
+[05/22/2023 15:24] filipvv
+They are in the `_pay(...)` function on all `JBPayoutRedemptionPaymentTerminal3_1` contracts (including `JBETHPaymentTerminal3_1`).
+
+See <https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/abstract/JBPayoutRedemptionPaymentTerminal3_1.sol#L1444>
+
+
+[05/22/2023 15:52] drgorilla.eth
+Check the latest pinned message
+
+
+[05/22/2023 16:28] 0x0oz
+ok thanks.
+
+
+[05/22/2023 16:28] evokid
+Dmed you 👍🏻
+
+
+[05/22/2023 16:29] marchev
+@Dr. Go Is the Buyback delegated planned to be used only for the Juicebox DAO as per the following update, or it is a generic contract that may be used by any Juicebox project (and thus any IERC20 project token)?
+
+https://docs.juicebox.money/town-hall/23-04-18/#buyback-delegate-update-by-jango
+
+
+[05/22/2023 16:38] qpzm
+Then, What is the purpose of not possessing the real token in the delegate?
+
+
+[05/22/2023 17:11] smartgooofy
+I read the explanation given for why there is a burn, mint and burn but I don't really get it. The claim was that reserved are not minted but then how can you burn them ?
+
+
+[05/22/2023 17:18] drgorilla.eth
+afk a bit for now, will check soon
+
+
+[05/22/2023 17:20] drgorilla.eth
+Reserved token are tracked in a mapping in the controller, their “end goal” is to be distributed to a whole list of recipients (a “split”), minted or not -> before that, they are just accounted, not minted as an erc20
+
+
+[05/22/2023 17:21] drgorilla.eth
+☝️
+
+
+[05/22/2023 17:22] drgorilla.eth
+By the dao initially, but project owners are free to use it (hence the token0/1 initialization in the constructor eg), provided they have enough LP ofc:)
+
+{Reactions}
+🙏 
+
+[05/22/2023 17:24] marchev
+thanks!
+
+
+[05/22/2023 17:28] smartgooofy
+Do you mean that if you don't mint them with the mintTokensOf function, that these tokens are not keeping tracked of in the controller ?
+
+
+[05/22/2023 17:32] drgorilla.eth
+mintTokensOf mint to a recipient, not to the reserved « list »
+
+
+[05/22/2023 17:33] drgorilla.eth
+There is no « mintToReservedOf » function (because that’s super edge case so we didn’t do it 😄 )
+
+
+[05/22/2023 17:37] smartgooofy
+Ah, but you referred in one of your comments to this file: https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/JBController3_1.sol#L146
+
+There is this variable that keeps track of the reserved tokens: reservedTokenBalanceOf
+
+In this function there is a mintTokensOf( ) function. Inside of this function at the end there is this piece of code: 
+
+   // Add reserved tokens if needed
+    if (_reservedRate > 0)
+      reservedTokenBalanceOf[_projectId] += _tokenCount - beneficiaryTokenCount;
+
+This is what I was referring at. If you don't burn and mint the tokens in the delegate like you did, then this line is not called so your reserved balance is not updated. I was asking if this was the reason why you did it with burn, mint, burn 🙂
+
+{Embed}
+https://github.com/jbx-protocol/juice-contracts-v3/blob/12d852f28d372dd44987586f8009c56b0fe247a9/contracts/JBController3_1.sol
+juice-contracts-v3/JBController3_1.sol at 12d852f28d372dd44987586f8...
+⚙️  Juicebox core V3 contracts. Contribute to jbx-protocol/juice-contracts-v3 development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/juice-contracts-v3-1B262
+
+
+[05/22/2023 17:45] drgorilla.eth
+Correct! We use a reserved rate of 0 or 100 to trick this!
+
+{Reactions}
+❤️ (2) 
+
+[05/22/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Juicebox Buyback Delegate** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+🫡 (33) yes (4) 👽 (3) 
+
+[06/13/2023 17:52] liveactionllamac4
+:code4rena: 💸 🎉 Awards for **Juicebox Buyback Delegate**:
+
+$3358.26 USDC » @ABA 
+$2258.34 USDC » @RaymondFam 
+$2242.15 USDC » @comradeKtg 
+$1157.51 USDC » @adriro 
+$968.38 USDC » @rbserver 
+$952.19 USDC » @max10afternoon 
+$630.46 USDC » @0xRobocop 
+$630.46 USDC » @HHK 
+$630.46 USDC » @SpicyMeatball 
+$576.32 USDC » @anon 
+$434.43 USDC » @minhquanym 
+$341.12 USDC » @Rolezn 
+$337.92 USDC » BLACK-PANDA-REACH ( @mis4nthr0pic | OS/SS, @escrow, @Muhab, @deliriusz, @savi0ur, @lopotras, @Naubit, @santipu_, @0xjmaria, @ret2basic.eth, & @Draco ) 
+$337.92 USDC » @sces60107 | GimelSec 
+$337.92 USDC » @Udsen 
+$321.72 USDC » @T1MOH 
+$321.72 USDC » @0xStalin 
+$321.72 USDC » @Madalad 
+$315.23 USDC » @0xnacho 
+$305.76 USDC » @JCN 
+$235.2 USDC » @Arz 
+$44.17 USDC » @Sathish9098 
+$44.17 USDC » @Tripathi 
+$44.17 USDC » @QiuhaoLi 
+$44.17 USDC » Dimagu ( @marcKn & @dmtrbch ) 
+$27.98 USDC » @K42 Ψ 
+$27.98 USDC » @hunter_w3b 
+$27.98 USDC » @pfapostol 
+$27.98 USDC » @NiSeR 
+$16.19 USDC » @ravikiranweb3 
+$16.19 USDC » @DoBetter 
+$16.19 USDC » @kutu 
+$16.19 USDC » @matrix_0wl 
+$16.19 USDC » @0xHati 
+$16.19 USDC » @lfzkoala 
+$16.19 USDC » @0xWaitress 
+$16.19 USDC » @souilos 
+$16.19 USDC » @ast3ros 
+$16.19 USDC » @0xhacksmithh 
+$16.19 USDC » @Santiago Moreno 
+$16.19 USDC » @0xprinc 
+$16.19 USDC » @pxng0lin 
+$16.19 USDC » @0xnev 
+$16.19 USDC » @V1235816 
+$16.19 USDC » @Kose 
+$16.19 USDC » @larsson 
+$16.19 USDC » @0xSmartContract 
+$16.19 USDC » @aviggiano 
+$16.19 USDC » @ayden 
+$16.19 USDC » @ni8mare 
+$16.19 USDC » @turvy_fuzz 
+$16.19 USDC » @jovemjeune 
+$16.19 USDC » @blackhole 
+$16.19 USDC » @radev_sw 
+$16.19 USDC » @tnevler 
+$16.19 USDC » @MohammedRizwan 
+$16.19 USDC » @SAAJ 
+$16.19 USDC » LosPollosHermanos ( @scaraven, @lemonkurd, & @jc1 ) 
+$16.19 USDC » @yellowBirdy 
+$16.19 USDC » @parsely 
+$16.19 USDC » @lukris02 
+$16.19 USDC » @favelanky 
+$16.19 USDC » @Haipls 
+$16.19 USDC » @Deekshith99 
+$16.19 USDC » @codeVolcan 
+$16.19 USDC » @Shubham 
+$16.19 USDC » @SmartGooofy 
+$16.19 USDC » @KKat7531 
+$16.19 USDC » @Arabadzhiev 
+$16.19 USDC » @ordinary 
+$16.19 USDC » @0xMosh 
+$16.19 USDC » @d3e4 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 0
+Med risk findings: 20 total, 3 unique
+Gas reports: 11
+QA reports: 57
+
+Awards will be distributed on Polygon within the next week. Congratulations, everyone! 💸 💸 💸
+
+Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.
+
+{Reactions}
+🫡 (20) 🚀 (6) ✅ (5) 
+
+[06/13/2023 17:58] brahma7456
+happy to see name in board. it was my first audit. thanks for support fam🫡
+
+{Reactions}
+hi5 (10) 
+
+[06/13/2023 18:01] pxng0lin
+No way, I made the board lol
+
+{Reactions}
+hi5 (8) 
+
+[06/13/2023 18:08] b80.nacho
+My first audit and really grateful to be in the board. Thanks fam! 🚀
+
+{Reactions}
+hi5 (7) 
+
+[06/13/2023 18:14] dwward3n
+when will the report be ready?
+
+
+[06/13/2023 18:50] pxng0lin
+I was part of a team, but it's showing me as a solo find, is there somehow a glitch or did it not submit as part of the team I'm in?
+
+
+[06/13/2023 20:50] pxng0lin
+@🦙 liveactionllama | C4
+
+
+[06/13/2023 21:07] liveactionllamac4
+I do see a QA submission tied to your warden name `pxng0lin` and that is what the award above is for. If you have further questions, I would recommend submitting a help request with a bit more detail and we can try to take a look.
+https://code4rena.com/help
+
+{Reactions}
+👍 
+
+[06/13/2023 21:18] mosharaf
+First time in c4 and on the board!!!
+
+{Reactions}
+hi5 (5) 
+
+[06/13/2023 21:18] mosharaf
+Feels amazing
+
+
+[06/14/2023 00:46] 0xumarkhatab
+hi there . i've submitted two reports , one for QA and one for Gas , the Gas one was good . can i know my status ?
+
+
+[06/14/2023 01:17] itsmetechjay
+You'll be able to review your submissions once the report has been published and the findings repo made public.
+
+
+[06/14/2023 01:35] 0xumarkhatab
+okey . Thank you !
+
+{Reactions}
+hi5 
+
+[06/14/2023 12:31] cloudellie
+Congrats, @Tripathi @pxng0lin @0xnacho @0xMosh ! First time seeing your name on the leaderboard is always special! 🎉
+
+{Reactions}
+💯 (10) ❤️ (7) 
+
+[06/15/2023 06:30] draco000
+Noiceee 💯
+
+
+[06/29/2023 19:07] dwward3n
+I just knew my $16.9 reward is from one QA level B, not from expected one
+
+
+[06/29/2023 19:08] dwward3n
+(knew it from profile 😉
+
+
+[07/17/2023 10:23] arpit1
+rewards has been distributed?
+
+
+[07/17/2023 14:02] dwward3n
+yes, a few weeks ago
+
+
+[07/17/2023 14:09] arpit1
+@🦙 liveactionllama | C4 
+
+I didn't get my reward amount?
+what should I have to do?
+
+
+[07/17/2023 14:40] itsmetechjay
+Can you open a help desk request and we can take a look? https://code4rena.com/help
+
+{Embed}
+https://code4rena.com/help
+Help | Code4rena
+Need help as a developer looking to secure your project or as a Warden finding vulnerabilities? Contact us via our Help page today.
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/c4-og-banner-35F1C.png
+
+{Reactions}
+👍🏻 
+
+[07/28/2023 15:54] prapandey031
+I went through the report. I found that the first medium bug (M-01) was also raised by me but was discarded as "Out of scope". 
+
+I would be highly grateful @LSDan if you could help me to know what did I do wrong with my submission and where should I improve 🙏
+
+Link to the first medium bug - 
+https://code4rena.com/reports/2023-05-juicebox#m-01-delegate-architecture-forces-users-to-set-zero-slippage
+
+{Embed}
+https://code4rena.com/reports/2023-05-juicebox
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/c4-og-banner-55027.png
+
+
+[07/28/2023 15:54] prapandey031
+https://github.com/code-423n4/2023-05-juicebox-findings/issues/240
+
+{Embed}
+https://github.com/code-423n4/2023-05-juicebox-findings/issues/240
+Missing "if (beneficiaryTokenCount < _minReturnedTokens) revert INA...
+Lines of code https://github.com/code-423n4/2023-05-juicebox/blob/main/juice-buyback/contracts/JBXBuybackDelegate.sol#L334 https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/abs...
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/240-8524A
+
+
+[07/28/2023 15:55] prapandey031
+This was my submission
+
+
+[07/28/2023 15:56] prapandey031
+I raised the same issue that _minReturnedTokens cannot be set to anything other than 0.
+
+I would be grateful for the help. I really want to know where did I go wrong 🙏
+
+
+[07/28/2023 17:02] lsdan
+It was discarded as overinflated severity, not out of scope.
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - juicebox-may18 [1108344279933390849].txt_Files/Screenshot_2023-07-28_at_17.02.40-1034F.png
+
+
+[07/28/2023 17:29] prapandey031
+I see. I get confused with this often. When a bug is considered to be overinflated and when is it downgraded (this bug could have been downgraded to medium)?
+
+Pls help 🙏
+
+
+==============================================================
+Exported 243 message(s)
+==============================================================
